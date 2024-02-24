@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		080B92C32A4C419D0062816B /* LearnTheQuranApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080B92C22A4C419D0062816B /* LearnTheQuranApp.swift */; };
+		080B92C32A4C419D0062816B /* QuranHarmony.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080B92C22A4C419D0062816B /* QuranHarmony.swift */; };
 		080B92C52A4C419D0062816B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080B92C42A4C419D0062816B /* ContentView.swift */; };
 		080B92C72A4C419E0062816B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 080B92C62A4C419E0062816B /* Assets.xcassets */; };
 		080B92CB2A4C419E0062816B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 080B92CA2A4C419E0062816B /* Preview Assets.xcassets */; };
@@ -34,12 +34,18 @@
 		080B93212A4C4D030062816B /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080B93202A4C4D030062816B /* HomeScreen.swift */; };
 		080B93232A4C4D4C0062816B /* WelcomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080B93222A4C4D4C0062816B /* WelcomeScreen.swift */; };
 		080B93252A4C4D5B0062816B /* RegScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080B93242A4C4D5B0062816B /* RegScreen.swift */; };
-		080B93272A4C4D6E0062816B /* RegSuccessScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080B93262A4C4D6E0062816B /* RegSuccessScreen.swift */; };
+		080B93272A4C4D6E0062816B /* 1ScreenRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080B93262A4C4D6E0062816B /* 1ScreenRegistration.swift */; };
 		080EDFB82A68172C00F7750D /* ModelFavorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080EDFB72A68172C00F7750D /* ModelFavorite.swift */; };
 		080EDFBB2A691F6C00F7750D /* FavoriteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080EDFBA2A691F6C00F7750D /* FavoriteManager.swift */; };
 		0821F3E82A52B92600DCD4CB /* AudioData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0821F3E72A52B92600DCD4CB /* AudioData.swift */; };
 		0821F3EA2A54558F00DCD4CB /* AyahListenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0821F3E92A54558F00DCD4CB /* AyahListenView.swift */; };
 		082D2C9C2A851B4900B04C36 /* FavViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082D2C9B2A851B4900B04C36 /* FavViewModel.swift */; };
+		08474CBA2B7B9DE5003CB80C /* FireBase Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08474CB92B7B9DE5003CB80C /* FireBase Functions.swift */; };
+		08474CBC2B7BB7F0003CB80C /* ScreenRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08474CBB2B7BB7F0003CB80C /* ScreenRegistration.swift */; };
+		08474CBF2B83EC28003CB80C /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08474CBE2B83EC28003CB80C /* SettingView.swift */; };
+		08474CC12B83F404003CB80C /* Werbung.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08474CC02B83F404003CB80C /* Werbung.swift */; };
+		08474CC42B8647FE003CB80C /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 08474CC32B8647FE003CB80C /* GoogleMobileAds */; };
+		08474CC62B88DD16003CB80C /* DesignCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08474CC52B88DD16003CB80C /* DesignCode.swift */; };
 		085094992A6ECDAE00499AA9 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = 085094982A6ECDAE00499AA9 /* Toast */; };
 		0850949B2A6ED8D200499AA9 /* RANDOM FUNCTIONS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0850949A2A6ED8D200499AA9 /* RANDOM FUNCTIONS.swift */; };
 		08DD03AB2A6B012C00F87373 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 08DD03AA2A6B012C00F87373 /* FirebaseAuth */; };
@@ -66,7 +72,7 @@
 
 /* Begin PBXFileReference section */
 		080B92BF2A4C419D0062816B /* LearnTheQuran.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnTheQuran.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		080B92C22A4C419D0062816B /* LearnTheQuranApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnTheQuranApp.swift; sourceTree = "<group>"; };
+		080B92C22A4C419D0062816B /* QuranHarmony.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuranHarmony.swift; sourceTree = "<group>"; };
 		080B92C42A4C419D0062816B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		080B92C62A4C419E0062816B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		080B92C82A4C419E0062816B /* LearnTheQuran.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LearnTheQuran.entitlements; sourceTree = "<group>"; };
@@ -96,12 +102,17 @@
 		080B93202A4C4D030062816B /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		080B93222A4C4D4C0062816B /* WelcomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreen.swift; sourceTree = "<group>"; };
 		080B93242A4C4D5B0062816B /* RegScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegScreen.swift; sourceTree = "<group>"; };
-		080B93262A4C4D6E0062816B /* RegSuccessScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegSuccessScreen.swift; sourceTree = "<group>"; };
+		080B93262A4C4D6E0062816B /* 1ScreenRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1ScreenRegistration.swift; sourceTree = "<group>"; };
 		080EDFB72A68172C00F7750D /* ModelFavorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelFavorite.swift; sourceTree = "<group>"; };
 		080EDFBA2A691F6C00F7750D /* FavoriteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteManager.swift; sourceTree = "<group>"; };
 		0821F3E72A52B92600DCD4CB /* AudioData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioData.swift; sourceTree = "<group>"; };
 		0821F3E92A54558F00DCD4CB /* AyahListenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AyahListenView.swift; sourceTree = "<group>"; };
 		082D2C9B2A851B4900B04C36 /* FavViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavViewModel.swift; sourceTree = "<group>"; };
+		08474CB92B7B9DE5003CB80C /* FireBase Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FireBase Functions.swift"; sourceTree = "<group>"; };
+		08474CBB2B7BB7F0003CB80C /* ScreenRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenRegistration.swift; sourceTree = "<group>"; };
+		08474CBE2B83EC28003CB80C /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		08474CC02B83F404003CB80C /* Werbung.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Werbung.swift; sourceTree = "<group>"; };
+		08474CC52B88DD16003CB80C /* DesignCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignCode.swift; sourceTree = "<group>"; };
 		0850949A2A6ED8D200499AA9 /* RANDOM FUNCTIONS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RANDOM FUNCTIONS.swift"; sourceTree = "<group>"; };
 		08DD03AE2A6B01FC00F87373 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D7C4123C2A5311730074171A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -112,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08474CC42B8647FE003CB80C /* GoogleMobileAds in Frameworks */,
 				085094992A6ECDAE00499AA9 /* Toast in Frameworks */,
 				08DD03AB2A6B012C00F87373 /* FirebaseAuth in Frameworks */,
 				08DD03AD2A6B012C00F87373 /* FirebaseFirestore in Frameworks */,
@@ -164,7 +176,7 @@
 				080B93032A4C454A0062816B /* Manager */,
 				080B930E2A4C46220062816B /* View-SCREENS */,
 				080B92C42A4C419D0062816B /* ContentView.swift */,
-				080B92C22A4C419D0062816B /* LearnTheQuranApp.swift */,
+				080B92C22A4C419D0062816B /* QuranHarmony.swift */,
 				080B92C62A4C419E0062816B /* Assets.xcassets */,
 				080B92C82A4C419E0062816B /* LearnTheQuran.entitlements */,
 				08DD03AE2A6B01FC00F87373 /* GoogleService-Info.plist */,
@@ -238,6 +250,9 @@
 				080B93042A4C455F0062816B /* API Calls */,
 				080B93092A4C45AF0062816B /* AudioPlayer */,
 				0850949A2A6ED8D200499AA9 /* RANDOM FUNCTIONS.swift */,
+				08474CB92B7B9DE5003CB80C /* FireBase Functions.swift */,
+				08474CC02B83F404003CB80C /* Werbung.swift */,
+				08474CC52B88DD16003CB80C /* DesignCode.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -275,7 +290,8 @@
 			children = (
 				080B93222A4C4D4C0062816B /* WelcomeScreen.swift */,
 				080B93242A4C4D5B0062816B /* RegScreen.swift */,
-				080B93262A4C4D6E0062816B /* RegSuccessScreen.swift */,
+				080B93262A4C4D6E0062816B /* 1ScreenRegistration.swift */,
+				08474CBB2B7BB7F0003CB80C /* ScreenRegistration.swift */,
 			);
 			path = StartScreens;
 			sourceTree = "<group>";
@@ -285,6 +301,7 @@
 			children = (
 				080B931E2A4C4CF40062816B /* FavoritenScreen.swift */,
 				080B93202A4C4D030062816B /* HomeScreen.swift */,
+				08474CBE2B83EC28003CB80C /* SettingView.swift */,
 			);
 			path = HomeScreens;
 			sourceTree = "<group>";
@@ -361,6 +378,7 @@
 				08DD03AA2A6B012C00F87373 /* FirebaseAuth */,
 				08DD03AC2A6B012C00F87373 /* FirebaseFirestore */,
 				085094982A6ECDAE00499AA9 /* Toast */,
+				08474CC32B8647FE003CB80C /* GoogleMobileAds */,
 			);
 			productName = LearnTheQuran;
 			productReference = 080B92BF2A4C419D0062816B /* LearnTheQuran.app */;
@@ -425,7 +443,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 080B92BA2A4C419D0062816B /* Build configuration list for PBXProject "LearnTheQuran" */;
+			buildConfigurationList = 080B92BA2A4C419D0062816B /* Build configuration list for PBXProject "QuranHarmony" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -437,6 +455,7 @@
 			packageReferences = (
 				08DD03A92A6B012C00F87373 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				085094972A6ECDAE00499AA9 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
+				08474CC22B8647FE003CB80C /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
 			);
 			productRefGroup = 080B92C02A4C419D0062816B /* Products */;
 			projectDirPath = "";
@@ -481,19 +500,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08474CBC2B7BB7F0003CB80C /* ScreenRegistration.swift in Sources */,
 				080B93252A4C4D5B0062816B /* RegScreen.swift in Sources */,
 				080B92C52A4C419D0062816B /* ContentView.swift in Sources */,
 				080B93192A4C46F10062816B /* AyahPlayerScreen.swift in Sources */,
 				080EDFBB2A691F6C00F7750D /* FavoriteManager.swift in Sources */,
+				08474CBF2B83EC28003CB80C /* SettingView.swift in Sources */,
 				080B930B2A4C45E40062816B /* AyahPlayer.swift in Sources */,
 				080B93162A4C46B50062816B /* SurahListeAudio.swift in Sources */,
 				080EDFB82A68172C00F7750D /* ModelFavorite.swift in Sources */,
-				080B93272A4C4D6E0062816B /* RegSuccessScreen.swift in Sources */,
+				080B93272A4C4D6E0062816B /* 1ScreenRegistration.swift in Sources */,
 				082D2C9C2A851B4900B04C36 /* FavViewModel.swift in Sources */,
 				0821F3E82A52B92600DCD4CB /* AudioData.swift in Sources */,
+				08474CC12B83F404003CB80C /* Werbung.swift in Sources */,
 				080B92F92A4C44A40062816B /* AyahAudio.swift in Sources */,
+				08474CBA2B7B9DE5003CB80C /* FireBase Functions.swift in Sources */,
 				080B93062A4C45770062816B /* TextRepository.swift in Sources */,
-				080B92C32A4C419D0062816B /* LearnTheQuranApp.swift in Sources */,
+				080B92C32A4C419D0062816B /* QuranHarmony.swift in Sources */,
 				080B92F72A4C44880062816B /* SurahObjects.swift in Sources */,
 				080B930D2A4C45FA0062816B /* AudioRepository.swift in Sources */,
 				080B931F2A4C4CF40062816B /* FavoritenScreen.swift in Sources */,
@@ -509,6 +532,7 @@
 				0821F3EA2A54558F00DCD4CB /* AyahListenView.swift in Sources */,
 				080B93232A4C4D4C0062816B /* WelcomeScreen.swift in Sources */,
 				080B931B2A4C47250062816B /* ListReadScreen.swift in Sources */,
+				08474CC62B88DD16003CB80C /* DesignCode.swift in Sources */,
 				080B93212A4C4D030062816B /* HomeScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -660,10 +684,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = LearnTheQuran/LearnTheQuran.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.4;
 				DEVELOPMENT_ASSET_PATHS = "\"LearnTheQuran/Preview Content\"";
 				DEVELOPMENT_TEAM = 23ZATJ832D;
 				ENABLE_PREVIEWS = YES;
@@ -685,8 +710,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = oemer.LearnTheQuran;
+				MARKETING_VERSION = 1.4;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oemer.QuranHarmony;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -701,10 +726,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = LearnTheQuran/LearnTheQuran.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.4;
 				DEVELOPMENT_ASSET_PATHS = "\"LearnTheQuran/Preview Content\"";
 				DEVELOPMENT_TEAM = 23ZATJ832D;
 				ENABLE_PREVIEWS = YES;
@@ -726,8 +752,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = oemer.LearnTheQuran;
+				MARKETING_VERSION = 1.4;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oemer.QuranHarmony;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -749,7 +775,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = oemer.QuranHarmony;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oemer.QuranHarmony;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -772,7 +798,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = oemer.QuranHarmony;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oemer.QuranHarmony;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -794,7 +820,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = oemer.LearnTheQuranUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oemer.QuranHarmony;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -816,7 +842,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = oemer.LearnTheQuranUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oemer.QuranHarmony;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -830,7 +856,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		080B92BA2A4C419D0062816B /* Build configuration list for PBXProject "LearnTheQuran" */ = {
+		080B92BA2A4C419D0062816B /* Build configuration list for PBXProject "QuranHarmony" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				080B92E22A4C419E0062816B /* Debug */,
@@ -869,6 +895,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		08474CC22B8647FE003CB80C /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.0.1;
+			};
+		};
 		085094972A6ECDAE00499AA9 /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/scalessec/Toast-Swift.git";
@@ -888,6 +922,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		08474CC32B8647FE003CB80C /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08474CC22B8647FE003CB80C /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
+		};
 		085094982A6ECDAE00499AA9 /* Toast */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 085094972A6ECDAE00499AA9 /* XCRemoteSwiftPackageReference "Toast-Swift" */;

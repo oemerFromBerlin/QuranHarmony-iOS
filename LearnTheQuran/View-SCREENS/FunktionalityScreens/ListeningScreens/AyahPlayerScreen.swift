@@ -2,61 +2,73 @@ import SwiftUI
 import AVFoundation
 import Foundation
 
-
-
-
-import SwiftUI
-import AVFoundation
-
+//-----------------------------------------------------------------------------------------------//
 // Die FloatingCircle-View
-struct FloatingCircles: View {
-    let size: CGFloat
-    let xPosition: CGFloat
-    let blurRadius: CGFloat
-    let color: Color
-    @State private var startY = false
+//struct FloatingCircles: View {
+//    let size: CGFloat
+//    let xPosition: CGFloat
+//    let blurRadius: CGFloat
+//    let color: Color
+//    @State private var startY = false
+//    
+//    var body: some View {
+//        Circle()
+//            .frame(width: size, height: size)
+//            .foregroundColor(color.opacity(0.4))
+//            .blur(radius: blurRadius)
+//            .position(x: xPosition, y: startY ? UIScreen.main.bounds.height + size : -size)
+//            .onAppear() {
+//                withAnimation(Animation.easeInOut(duration: Double.random(in: 15...25)).repeatForever(autoreverses: false)) {
+//                    startY.toggle()
+//                }
+//            }
+//    }
+//}
 
-    var body: some View {
-        Circle()
-            .frame(width: size, height: size)
-            .foregroundColor(color.opacity(0.4))
-            .blur(radius: blurRadius)
-            .position(x: xPosition, y: startY ? UIScreen.main.bounds.height + size : -size)
-            .onAppear() {
-                withAnimation(Animation.easeInOut(duration: Double.random(in: 15...25)).repeatForever(autoreverses: false)) {
-                    startY.toggle()
-                }
-            }
-    }
-}
+//let circless: [CircleDataa] = [
+//    // Hier können Sie Ihre CircleData-Objekte hinzufügen
+//]
 
-let circless: [CircleDataa] = [
-    // Hier können Sie Ihre CircleData-Objekte hinzufügen
-]
+//struct CircleDataa: Identifiable {
+//    let id: Int
+//    let size: CGFloat
+//    let xPosition: CGFloat
+//    let blurRadius: CGFloat
+//    let color: Color
+//}
+//-----------------------------------------------------------------------------------------------//
+//-----------------------------------------------------------------------------------------------//
 
-struct CircleDataa: Identifiable {
-    let id: Int
-    let size: CGFloat
-    let xPosition: CGFloat
-    let blurRadius: CGFloat
-    let color: Color
-}
-
+//-----------------------------------------------------------------------------------------------//
 struct AudioPlayerView: View {
     @EnvironmentObject var textRepository : TextRepository
     @EnvironmentObject var audioRepository : AudioRepository
     @EnvironmentObject var favViewModel : FavViewModel
-    
     @ObservedObject var audioPlayer: AyahhPlayer
     var surah: SurahObjects
     @ObservedObject private var favoritesManager = FavoritesManager.shared
     
+    
+    
+    let circles: [CircleData] = [
+        CircleData(id: 1, size: 100, xPosition: .random(in: 0...UIScreen.main.bounds.width), blurRadius: 2, color: Color.blue.opacity(0.7)),
+        CircleData(id: 3, size: 150, xPosition: .random(in: 0...UIScreen.main.bounds.width), blurRadius: 6, color: Color.green.opacity(0.7)),
+        CircleData(id: 4, size: 75, xPosition: .random(in: 0...UIScreen.main.bounds.width), blurRadius: 5, color: Color.purple.opacity(0.5)),
+        CircleData(id: 5, size: 225, xPosition: .random(in: 0...UIScreen.main.bounds.width), blurRadius: 5, color: Color.orange.opacity(0.5)),
+        CircleData(id: 6, size: 30, xPosition: .random(in: 0...UIScreen.main.bounds.width), blurRadius: 5, color: Color.red.opacity(0.7)),
+        CircleData(id: 7, size: 180, xPosition: .random(in: 0...UIScreen.main.bounds.width), blurRadius: 5, color: Color.black.opacity(0.7)),
+        CircleData(id: 8, size: 20, xPosition: .random(in: 0...UIScreen.main.bounds.width), blurRadius: 5, color: Color.green.opacity(0.5)),
+        CircleData(id: 9, size: 200, xPosition: .random(in: 0...UIScreen.main.bounds.width), blurRadius: 5, color: Color.white.opacity(0.7)),
+        CircleData(id: 10, size: 200, xPosition: .random(in: 0...UIScreen.main.bounds.width), blurRadius: 5, color: Color.black.opacity(0.7)),
+    ]
+//-----------------------------------------------------------------------------------------------//
     var body: some View {
         NavigationView {
             GeometryReader { geometry in
                 ZStack {
                     ForEach(circles, id: \.id) { circle in
-                        FloatingCircle(size: circle.size, xPosition: circle.xPosition, blurRadius: circle.blurRadius, color: circle.color)
+                        // Verwende hier FloatingCircles (korrigiere den Namen)
+                        FloatingCircles(size: circle.size/*, xPosition: circle.xPosition*/, blurRadius: circle.blurRadius, color: circle.color)
                     }
                     
                     VStack(spacing: 16) {
@@ -68,7 +80,7 @@ struct AudioPlayerView: View {
                                 
                                 if let currentAyahText = currentAyahText {
                                     Group {
-                                        Text(surah.englishName)
+                                        Text("\(surah.englishName) \((currentAyah.numberInSurah))")
                                             .foregroundColor(.white)
                                         Text("Bismillahirahmanirahim")
                                             .foregroundColor(.green.opacity(0.6))
@@ -97,11 +109,11 @@ struct AudioPlayerView: View {
                                     }
                                     .padding(.bottom, 20)
                                 } else {
-                                    Text("nix founded")
+                                    Text("Loading Ayah´s...")
                                         .foregroundColor(.red)
                                 }
                             } else {
-                                Text("Kein aktueller Ayah verfügbar.")
+                                Text("Keine aktueller Ayah verfügbar.")
                             }
                         }
                         .frame(height: max(geometry.size.height - 250, 0))
@@ -113,11 +125,15 @@ struct AudioPlayerView: View {
                                 Text("\(timeString(from: audioPlayer.currentTime))")
                                     .foregroundColor(.white)
                                 
-                                Slider(value: $audioPlayer.currentTime, in: 0...max(audioPlayer.currentTime, audioPlayer.totalTime, 1.0))
+                                Slider(value: $audioPlayer.currentTime, in: 0...max(audioPlayer.currentTime, audioPlayer.totalTime, 0.1))
                                     .frame(height: 3)
                                     .background(LinearGradient(gradient: Gradient(colors: [.green, .blue]), startPoint: .top, endPoint: .bottomTrailing))
-                                    .foregroundColor(.blue)
-                                    .disabled(true)
+//                                    .onChange(of: audioPlayer.currentTime) { newValue in
+//                                        audioPlayer.seek(to: newValue)
+//                                    }
+                                    //.foregroundColor(.blue)
+                                    .disabled(false)
+                                    
                                 
                                 Text("\(timeString(from: audioPlayer.totalTime))")
                                     .foregroundColor(.white)
@@ -127,13 +143,16 @@ struct AudioPlayerView: View {
                                 Button(action: {
                                     withAnimation {
                                         audioPlayer.prev()
+                                        
                                     }
-                                }) {
+                                }) 
+                                {
                                     Image(systemName: "backward.fill")
                                         .font(.system(size: 30))
                                         .foregroundColor(.white)
-                                        .offset(x: 40)
                                 }
+                                .offset(x: 40)
+
                                 
                                 Spacer()
                                 
@@ -158,11 +177,10 @@ struct AudioPlayerView: View {
                                     Image(systemName: "forward.fill")
                                         .font(.system(size: 30))
                                         .foregroundColor(.white)
-                                        .offset(x: -40)
                                 }
+                                .offset(x: -40)
                             }
                         }
-                        
                         Spacer()
                     }
                 }
@@ -191,7 +209,8 @@ struct AudioPlayerView: View {
         }
     }
 }
-
+//-----------------------------------------------------------------------------------------------//
+//-----------------------------------------------------------------------------------------------//
 private func timeString(from time: TimeInterval) -> String {
     guard !time.isNaN && !time.isInfinite else {
         return "00:00"
@@ -201,9 +220,11 @@ private func timeString(from time: TimeInterval) -> String {
     return String(format: "%02d:%02d", minutes, seconds)
 }
 
+//-----------------------------------------------------------------------------------------------//
+//-----------------------------------------------------------------------------------------------//
 struct AudioPlayerView_Previews: PreviewProvider {
     static var previews: some View {
-        let audioRepository = AudioRepository()
+        _ = AudioRepository()
         let sampleAyahs = [
             AyahAudio(number: 1, audio: "url-audio-mp31", audioSecondary: [], text: "url-audio-mp31", numberInSurah: 1, juz: 1, manzil: 1, page: 1, ruku: 1, hizbQuarter: 1)
         ]
@@ -217,198 +238,3 @@ struct AudioPlayerView_Previews: PreviewProvider {
 
 
 
-
-
-
-
-//struct AudioPlayerView: View {
-//
-//    @EnvironmentObject var textRepository : TextRepository
-//    @EnvironmentObject var audioRepository : AudioRepository
-//    @EnvironmentObject var favViewModel : TaskViewModel
-//
-//
-////    @EnvironmentObject private var audioRepository: AudioRepository
-//    @ObservedObject var audioPlayer: AyahhPlayer
-//    var surah: SurahObjects
-//    @ObservedObject private var favoritesManager = FavoritesManager.shared
-//
-//
-//    var body: some View {
-//        NavigationView {
-//            GeometryReader { geometry in
-//                VStack(spacing: 16) {
-//                    ScrollView {
-//                        if let currentAyah = audioPlayer.currentAyah {
-//                            let currentAyahText = textRepository.surahs
-//                                .flatMap(\.ayahs)
-//                                .first(where: { $0.number == currentAyah.number })
-//                            Text("")
-//                                .onAppear {
-//                                    print("\(textRepository.surahs.count)")
-//                                }
-//
-//                            if let currentAyahText = currentAyahText {
-//                                Group {
-//                                    Text(surah.englishName)
-//                                    Text(">| Ayah:\(currentAyah.numberInSurah) - \(currentAyahText.text)|<")
-//                                        .foregroundColor(.white)
-//                                        .font(.title)
-//                                        .multilineTextAlignment(.leading)
-//                                        .padding()
-//                                        .background(Color.black.opacity(0.4))
-//                                        .cornerRadius(15)
-//                                }
-//                                .onAppear {
-//                                    print(" \(currentAyahText.text)")
-//                                }
-//
-//                                Button(action: {
-//                                    if self.favoritesManager.isFavorite(currentAyah.number) {
-//                                        print(" \(currentAyah.number) ")
-//                                        self.favoritesManager.removeFavorite(currentAyah.number)
-//                                    } else {
-//                                        print(" \(currentAyah.number) ")
-//                                        self.favoritesManager.addFavorite(currentAyah.number)
-//                                    }
-//                                }) {
-//                                    Image(systemName: self.favoritesManager.isFavorite(currentAyah.number) ? "heart.fill" : "heart")
-//                                        .font(.title)
-//                                        .foregroundColor(self.favoritesManager.isFavorite(currentAyah.number) ? .red : .gray)
-//                                }
-//
-//                            } else {
-//                                Text("nix founded")
-//                                    .foregroundColor(.red)
-//                                    .onAppear {
-//                                        print("ayah nichtgefunfden \(currentAyah.numberInSurah) ")
-//                                    }
-//                            }
-//
-//                        } else {
-//                            Text("Kein aktueller Ayah verfügbar.")
-//                                .onAppear {
-//                                    print("currentAyah ist nil")
-//                                }
-//                        }
-//
-//                    }
-//                    .frame(height: max(geometry.size.height - 250, 0))
-//                    Spacer(minLength: 20)
-//
-//                    // Beginn der hinzugefügten Teile
-//                    VStack{
-//                        HStack {
-//                            Text("\(timeString(from: audioPlayer.currentTime))")
-//                                .foregroundColor(.white)
-//                                .font(.system(size: 16))
-//                            //                            .offset(x: -20)
-//
-//                            Slider(value: $audioPlayer.currentTime, in: 0...max(audioPlayer.currentTime, audioPlayer.totalTime, 1.0))
-//                                .accentColor(.blue)
-//                                .frame(height: 10)
-//                                .foregroundColor(.blue)
-//                                .background(LinearGradient(gradient: Gradient(colors: [.green, .blue]), startPoint: .top, endPoint: .bottomTrailing))
-//                                .cornerRadius(33)
-//                                .disabled(true)
-//
-//                            Text("\(timeString(from: audioPlayer.totalTime))")
-//                                .foregroundColor(.white)
-//                                .font(.system(size: 16))
-//
-//                            Divider()
-//                        }
-//
-//                        HStack {
-//                            Button(action: {
-//                                audioPlayer.prev()
-//                            }) {
-//                                Image(systemName: "backward.fill")
-//                                    .font(.system(size: 30))
-//                                    .foregroundColor(.white.opacity(1))
-//                                    .offset(x: 40)
-//                            }
-//
-//                            Spacer()
-//
-//                            Button(action: {
-//                                audioPlayer.togglePlayPause()
-//                            }) {
-//                                Image(systemName: audioPlayer.isPlaying ? "pause.circle.fill" : "play.circle.fill")
-//                                    .font(.system(size: 120))
-//                                    .foregroundColor(audioPlayer.isPlaying ? .red.opacity(0.5) : .green.opacity(1.0))
-//                                //                                .padding()
-//                            }
-//
-//                            Spacer()
-//
-//                            Button(action: {
-//                                audioPlayer.next()
-//                            }) {
-//                                Image(systemName: "forward.fill")
-//                                    .font(.system(size: 30))
-//                                    .foregroundColor(.white.opacity(1))
-//                                    .offset(x: -40)
-//                            }.buttonStyle(.plain)
-//
-//
-//                            //                            .plain()
-//
-//                        }
-//                    }
-//
-//                    Spacer()
-//                    // Ende der hinzugefügten Teile
-//
-//                }
-//                .padding()
-//                .background(
-//                    LinearGradient(
-//                        gradient: Gradient(colors: [.black.opacity(0.8), .black.opacity(0.8)]),
-//                        startPoint: .top,
-//                        endPoint: .bottomTrailing
-//                    )
-//                )
-//                .cornerRadius(10)
-//                .shadow(radius: 5)
-//                .navigationBarHidden(true)
-//                .edgesIgnoringSafeArea(.all)
-//                .onAppear {
-//                    audioPlayer.addTimeObserver()
-//                    UINavigationBar.appearance().isTranslucent = false
-//                    textRepository.fetchSurahs()
-//                }
-//                .onDisappear {
-//                    audioPlayer.removeTimeObserver()
-//                    UINavigationBar.appearance().isTranslucent = true
-//                }
-//            }
-//        }
-//    }
-//}
-//
-//private func timeString(from time: TimeInterval) -> String {
-//    guard !time.isNaN && !time.isInfinite else {
-//        return "00:00"
-//    }
-//    let minutes = Int(time) / 60
-//    let seconds = Int(time) % 60
-//    return String(format: "%02d:%02d", minutes, seconds)
-//}
-//
-//
-//struct AudioPlayerView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        let audioRepository = AudioRepository()
-//        let sampleAyahs = [
-//            AyahAudio(number: 1, audio: "url-audio-mp31", audioSecondary: [], text: "url-audio-mp31", numberInSurah: 1, juz: 1, manzil: 1, page: 1, ruku: 1, hizbQuarter: 1)]
-//
-//        let sampleSurah = SurahObjects(number: 1, name: "", englishName: "", englishNameTranslation: "", revelationType: "", ayahs: sampleAyahs)
-//        let audioPlayer = AyahhPlayer(ayahs: sampleAyahs, textRepository: TextRepository())
-//
-//        return AudioPlayerView(audioPlayer: audioPlayer, surah: sampleSurah)
-//            .environmentObject(audioRepository)
-////            .previewLayout(.sizeThatFits)
-//            .padding()
-//    }
-//}

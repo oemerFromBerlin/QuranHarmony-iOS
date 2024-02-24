@@ -13,7 +13,7 @@ class AudioRepository: ObservableObject {
     
     
     func fetchSurahAudio() {
-        guard let url = URL(string: "http://api.alquran.cloud/v1/quran/ar.alafasy") else {
+        guard let url = URL(string: "https://api.alquran.cloud/v1/quran/ar.alafasy") else {
             print("Fehler beim Aufrufen der URL")
             return
         }

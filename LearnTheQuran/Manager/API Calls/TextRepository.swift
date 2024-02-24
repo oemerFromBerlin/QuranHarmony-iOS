@@ -10,6 +10,9 @@ import Foundation
 class TextRepository: ObservableObject {
     @Published var surahs = [SurahTexte]()
     @Published var areSurahsLoaded = false
+//    @Published var ayahs = [AyahText]()
+    @Published var lastSelectedAyah: AyahText?
+
 
     
     func fetchSurahs() {

@@ -1,19 +1,16 @@
-//
-//  LearnTheQuranApp.swift
-//  LearnTheQuran
-//
-//  Created by Ömer Tarakci on 28.06.23.
-//
-
 import UIKit
 import SwiftUI
 import Firebase
 import AVFoundation
+import GoogleMobileAds
 
 @main
-struct LearnTheQuranApp: App {
+struct QuranHarmony: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @StateObject var ayahPlayer = AyahhPlayer(ayahs: [], textRepository: TextRepository())
+    let firebaseManager = FirebaseManager()
+    let adManager = AdManager.shared // Erstellen Sie eine Instanz von AdManager
+
 
     init() {
         FirebaseApp.configure()
@@ -30,7 +27,9 @@ struct LearnTheQuranApp: App {
     var body: some Scene {
         WindowGroup {
             RegScreen()
+                .environmentObject(firebaseManager)
                 .environmentObject(ayahPlayer)
+                .environmentObject(adManager) 
                 .onAppear {
                     do {
                         try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: [.mixWithOthers, .allowAirPlay])
@@ -47,7 +46,8 @@ struct LearnTheQuranApp: App {
 
 class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        print(">> your code here !!")
+        // Initialisieren des Google Mobile Ads SDK
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
         return true
     }
 }

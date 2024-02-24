@@ -14,12 +14,11 @@ struct FavoriteScreen: View {
     @EnvironmentObject private var favoritesManager: FavViewModel
 
     var body: some View {
-        NavigationView {
             ZStack {
                 backgroundColor.edgesIgnoringSafeArea(.all)
 
                 VStack {
-                    Spacer(minLength: 20)
+                    //Spacer(minLength: 20)
 
                     Text("Favoriten")
                         .font(Font.custom("Scheherazade", size: 24))
@@ -67,13 +66,13 @@ struct FavoriteScreen: View {
                     textRepository.fetchSurahs()
                 }
             }
-            .edgesIgnoringSafeArea(.all)
+            //.edgesIgnoringSafeArea(.all)
             .navigationBarTitle("Favoriten", displayMode: .inline)
             .background(NavigationConfigurator { nc in
                 nc.navigationBar.barTintColor = UIColor(backgroundColor)
                 nc.navigationBar.titleTextAttributes = [.foregroundColor: UIColor(foregroundColor)]
             })
-        }
+        
     }
 
     private var backgroundColor: Color {
